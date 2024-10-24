@@ -15,15 +15,9 @@ To integrate WalletConnect into your app and ensure compatibility with Intersend
 
 ```mermaid
 graph TD
-    A[Your App] --> B(Generates WalletConnect URI)
-    B --> C[User Client]
-    C -->|Uses URI| D[Wallet Interaction]
-
-    subgraph WalletConnect URI Process
-        E[Connect User Wallet] --> F{Generates Session Key}
-        F --> G{URI: wc:<session-id>@<version>?bridge=<bridge-url>&key=<key>}
-        G --> H[URI Passed to Client]
-    end
+    A[Your App] -->|Generates| B[WalletConnect URI]
+    B -->|Passes URI| C[User Client]
+    C -->|Uses URI| D[Connects Wallet]
 ```
 
 ### Explanation of the Flow:
