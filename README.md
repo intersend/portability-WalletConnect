@@ -16,7 +16,7 @@ To integrate WalletConnect into your app and ensure compatibility with Intersend
 ```mermaid
 graph TD
     A[Your App] -->|Generates| B[WalletConnect URI]
-    B -->|Passes URI (via iframe postMessage)| C[User Client]
+    B -->|Passes URI via iframe postMessage| C[User Client]
     C -->|Uses URI| D[Connects Wallet]
 ```
 
